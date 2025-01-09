@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  background-color: #1a1a1a;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Nunito Sans", serif;
+}
+
+.container {
+  border: 1px solid #888383;
+  border-radius: 8px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.container h1 {
+  color: #ececec;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+.container input {
+  width: 70%;
+  padding: 0.6rem;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+}
+
+.container input:focus {
+  border: 2px solid rgb(124, 179, 234);
+  outline: none;
+}
+
+#add-task-button {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: rgb(59, 163, 195);
+  color: #fff;
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#add-task-button:hover {
+  background-color: rgb(45, 123, 147);
+}
+
+/* Style for the dynamically added list items */
+
+.dynamic-item {
+  display: flex; /* Enable flexbox */
+  align-items: center; /* Align items vertically */
+  justify-content: space-between; /* Ensure spacing between text and button */
+  background-color: #333; /* Optional background */
+  color: white; /* White text color */
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+.dynamic-item span {
+  flex: 1; /* Make the span take up available space */
+}
+
+/* Style for the delete button */
+.dynamic-item button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-left: auto; /* Push the button to the far right */
+}
+.dynamic-item button:hover {
+  background-color: darkred;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #aaa; /* Optional: Change color for completed tasks */
+}
